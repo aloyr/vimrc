@@ -59,7 +59,7 @@ if &ft =~ '\<php\>'
   " Syntastic settings, adapted from
   " echodittolabs.org/drupal-coding-standards-vim-code-sniffer-syntastic-regex
   if exists('loaded_syntastic_plugin') && executable('phpcs')
-    let g:syntastic_phpcs_conf = ' --standard=Drupal ' . drupaldetect#php_ext
+    let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=' . drupaldetect#php_ext
   endif
 
   " Cf. comment on 'tags':  'ignorecase' is global.
