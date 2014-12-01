@@ -44,7 +44,7 @@ function drupaldetect#DrupalRoot(path, ...) " {{{
         \ ],
         \ 8 : [
         \   ['index.php'],
-        \   ['core', 'update.php'],
+        \   ['core', 'install.php'],
         \   ['core', 'includes', 'bootstrap.inc'],
         \   ['core', 'modules', 'node', 'node.module'],
         \   ['core', 'modules', 'system', 'system.module'],
@@ -109,10 +109,10 @@ function drupaldetect#InfoPath(path, ...) " {{{
       " If there is more than one, they are separated by newlines.
       let files = split(infopath, '\n')
       for file in files
-	if file =~ '\.info$' || file =~ '\.info.yml$'
+        if file =~ '\.info$' || file =~ '\.info.yml$'
           let s:info_path_cache[a:path] = file
-	  return file
-	endif
+          return file
+        endif
       endfor
       let s:info_path_cache[a:path] = files[0]
       return files[0]

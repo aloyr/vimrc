@@ -86,11 +86,17 @@ endfunction " }}} }}}
 " - @var $DRUPAL_ROOT
 "   Set this environment variable from b:Drupal_info.DRUPAL_ROOT.
 " - SnipMate settings
-let s:snip_path = expand('<sfile>:p:h:h') . '/snipmate/drupal'
+let s:snip_path = expand('<sfile>:p:h:h') . '/snippets/drupal'
 function! drupal#BufEnter() " {{{
   if strlen(b:Drupal_info.DRUPAL_ROOT)
     let $DRUPAL_ROOT = b:Drupal_info.DRUPAL_ROOT
   endif
+  " Garbas' snipmate is already aware of version-indepedent snippets
+  " so we load the scope for the version-dependent snippets.
+  if strlen(b:Drupal_info.CORE) && exists(':SnipMateLoadScope')
+    exec 'SnipMateLoadScope drupal' . b:Drupal_info.CORE
+  endif
+  " Load snippets for the snipmate version on vimscripts.
   if exists('*ExtractSnips')
     call ResetSnippets('drupal')
     " Load the version-independent snippets.
@@ -103,8 +109,8 @@ function! drupal#BufEnter() " {{{
     if strlen(b:Drupal_info.CORE)
       let snip_path = s:snip_path . b:Drupal_info.CORE . '/'
       for ft in split(&ft, '\.')
-	call ExtractSnips(snip_path . ft, 'drupal')
-	call ExtractSnipsFile(snip_path . ft . '.snippets', 'drupal')
+        call ExtractSnips(snip_path . ft, 'drupal')
+        call ExtractSnipsFile(snip_path . ft . '.snippets', 'drupal')
       endfor
     endif " strlen(b:Drupal_info.CORE)
   endif " exists('*ExtractSnips')
@@ -137,20 +143,65 @@ function drupal#OpenURL(base) " {{{
   call system(open . ' ' . url . shellescape(func))
 endfun " }}} }}}
 
+" function! s:FindPath(dirs, subpath, condition) " {{{
+" Utility function:  find a path satisfying a condition
+" @param
+"   List dirs: each entry is a String representing a directory, ending in '/'
+"   String subpath: a subpath to look for inside each directory
+"   String condition: a condition to be evaluated on path = directory . subpath
+" @return String
+"   The path satisfying the condition, '' if none is found.
+function! s:FindPath(dirs, subpath, condition) " {{{
+  for dir in a:dirs
+    let path = dir . a:subpath
+    execute 'let success =' a:condition
+    if success
+      return path
+    endif
+  endfor
+  return ''
+endfun  " }}} }}}
+
 " @function! drupal#CtagsPath() " {{{
 " Return path to exuberant ctags, or '' if not found.
 function! drupal#CtagsPath() " {{{
   let dirs = ['', '/usr/bin/', '/usr/local/bin/']
-  for dir in dirs
-    if executable(dir . 'ctags')
-      if system(dir . 'ctags --version') =~ 'Exuberant Ctags'
-        return dir . 'ctags'
-      endif
-    endif
-  endfor
-  return ''
+  let condition = 'executable(path) && system(path --version) =~ "Exuberant Ctags"'
+  return s:FindPath(dirs, 'ctags', condition)
 endfun
 " }}} }}}
+
+" @function! drupal#PhpcsPath() " {{{
+" Return path to phpcs (PHP CodeSniffer), or '' if not found.
+function! drupal#PhpcsPath() " {{{
+  let dirs = ['', $HOME . '/.composer/vendor/bin/', '/usr/local/bin/']
+  return s:FindPath(dirs, 'phpcs', 'executable(path)')
+endfun
+" }}} }}}
+let drupal#phpcs_exec = drupal#PhpcsPath()
+
+" @function! drupal#CodeSnifferPath() " {{{
+" Return path to Drupal standards for PHP CodeSniffer, or '' if not found.
+function! drupal#CodeSnifferPath() " {{{
+  let dirs = [$HOME . '/.composer/vendor/drupal/', $HOME . '/.drush/']
+  return s:FindPath(dirs, 'coder/coder_sniffer/Drupal', 'isdirectory(path)')
+endfun
+" }}} }}}
+let drupal#codesniffer_standard = drupal#CodeSnifferPath()
+
+" @function! drupal#PhpcsArgs() " {{{
+" Return the arguments that should be added to phpcs.
+function! drupal#PhpcsArgs() " {{{
+  let args = {
+	\ 'standard': g:drupal#codesniffer_standard,
+	\ 'report': 'csv',
+	\ 'extensions': g:drupaldetect#php_ext
+	\ }
+  call filter(args, 'strlen(v:val)')
+  return join(map(items(args), '"--" . v:val[0] . "=" . v:val[1]'))
+endfun
+" }}} }}}
+let drupal#phpcs_args = drupal#PhpcsArgs()
 
 " @function! drupal#TagGen(type)" {{{
 " Invoke ctags via drush, either for the current project or for the Drupal
@@ -203,11 +254,13 @@ function! drupal#DrupalInfo() " {{{
   if info.CORE == '' && info.DRUPAL_ROOT != ''
     let INFO_FILE = info.DRUPAL_ROOT . '/modules/system/system.info'
     if filereadable(INFO_FILE)
+      " Looks like we are dealing with Drupal 6/7.
       let info.CORE = drupaldetect#CoreVersion(INFO_FILE)
     else
-      let INFO_FILE = info.DRUPAL_ROOT . '/core/modules/system/system.info'
+      let INFO_FILE = info.DRUPAL_ROOT . '/core/modules/system/system.info.yml'
       if filereadable(INFO_FILE)
-	let info.CORE = drupaldetect#CoreVersion(INFO_FILE)
+        " Looks like we are dealing with Drupal 8.
+        let info.CORE = drupaldetect#CoreVersion(INFO_FILE)
       endif
     endif
   elseif info.DRUPAL_ROOT == '' && info.CORE != ''  && exists('g:Drupal_dirs')

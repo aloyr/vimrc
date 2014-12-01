@@ -54,6 +54,14 @@ snippet textfield
 	  '#size' => ${3:/* default:60 */},
 	);
 
+snippet text_format
+	$form['${1:/* form element */}'] = array(
+	  '#type' => 'text_format',
+	  '#title' => t('${2:/* title */}'),
+	  '#size' => ${3:/* default:60 */},
+	  '#format' => ${4:NULL},
+	);
+
 ## drupal_ functions
 
 snippet drupal_get_form
@@ -76,9 +84,28 @@ snippet hook_cron
 	 * Implements hook_cron().
 	 */
 	function `Filename()`_cron() {
-	  ${1:// Your code here.}
+	  /*
+	   *  // Short-running operation example, not using a queue:
+	   *  // Delete all expired records since the last cron run.
+	   *  $expires = variable_get('mymodule_cron_last_run', REQUEST_TIME);
+	   *  db_delete('mymodule_table')
+	   *    ->condition('expires', $expires, '>=')
+	   *    ->execute();
+	   *  variable_set('mymodule_cron_last_run', REQUEST_TIME);
+	   *
+	   *  // Long-running operation example, leveraging a queue:
+	   *  // Fetch feeds from other sites.
+	   *  $result = db_query('SELECT * FROM {aggregator_feed} WHERE checked + refresh < :time AND refresh != :never', array(
+	   *    ':time' => REQUEST_TIME,
+	   *    ':never' => AGGREGATOR_CLEAR_NEVER,
+	   *  ));
+	   *  $queue = DrupalQueue::get('aggregator_feeds');
+	   *  foreach ($result as $feed) {
+	   *    $queue->createItem($feed);
+	   *  }
+	   */
+	   ${1:/* Your code here */}
 	}
-
 snippet hook_form_alter
 	/**
 	 * Implements hook_form_alter().
@@ -92,16 +119,19 @@ snippet hook_form_alter
 
 snippet hook_help
 	/**
-	 * Implements hook_help.
+	 * Implements hook_help().
 	 */
 	function `Filename()`_help($path, $arg) {
 	  switch ($path) {
-	    case '${1:/* path */}':
-	      // Enter your help text below
-	      return t('${2:/* text */}');
+	    // Main module help for the block module
+	    /*
+	     *case 'admin/help#block':
+	     *  return '<p>' . t('Blocks are boxes of content rendered into an area, or region, of a web page. The default theme Bartik, for example, implements the regions "Sidebar first", "Sidebar second", "Featured", "Content", "Header", "Footer", etc., and a block may appear in any one of these areas. The <a href="@blocks">blocks administration page</a> provides a drag-and-drop interface for assigning a block to a region, and for controlling the order of blocks within regions.', array('@blocks' => url('admin/structure/block'))) . '</p>';
+	     */
+	    case '${1:admin/help#`Filename()`}':
+	      return '<p>' . t('${2:help text}', array('${3:@placeholder}' => ${4:value})) . '</p>';
 	  }
 	}
-
 snippet hook_init
 	/**
 	 * Implements hook_init().
@@ -115,49 +145,50 @@ snippet hook_mail_alter
 	 * Implements hook_mail_alter().
 	 */
 	function `Filename()`_mail_alter(&$message) {
-	  ${1:// Your code here.}
+	  /*
+	   *if ($message['id'] == 'modulename_messagekey') {
+	   *  $message['body'][] = "--\nMail sent out from " . variable_get('sitename', t('Drupal'));
+	   *}
+	   */
+	  if ($message['id'] == '${1}') {
+	    $message['body'][] = "${2}";
+	  }
 	}
-
 snippet hook_menu
 	/**
 	 * Implements hook_menu().
 	 */
 	function `Filename()`_menu() {
-	  $${1:items} = array();
-	
-	  // Put your menu items here.
-	  $$1['${2:path}'] = array(
-	    'title' => '${3:title}',
-	    'page callback' => '${4:page_callback}',
-	    'access arguments' => array('${5:permission}'),
-	    'type' => ${6:MENU_SUGGESTED_ITEM},
+	  /*
+	   *$items['blog'] = array(
+	   *  'title' => 'blogs',
+	   *  'page callback' => 'blog_page',
+	   *  'access arguments' => array('access content'),
+	   *  'type' => MENU_SUGGESTED_ITEM,
+	   *);
+	   */
+	  $items['${1:path/to/register}'] = array(
+	    'title' => '${2:Page title}',
+	    'page callback' => '${3:callback_function}',
+	    'page arguments' => array(${4}),
+	    'access arguments' => array('${5:View published content}'),
+	    'type' => ${6:MENU_NORMAL_ITEM}, // MENU_CALLBACK, MENU_LOCAL_TASK, MENU_DEFAULT_LOCAL_TASK, MENU_LOCAL_ACTION, MENU_SUGGESTED_ITEM,
+	    // 'file' => ${7:`Filename()`.pages.inc},
 	  );
 	
-	  return $$1;
+	  return $items;
 	}
-
 snippet hook_menu_alter
 	/**
 	 * Implements hook_menu_alter().
 	 */
-	function `Filename()`_menu_alter(&$${1:items}) {
-	  $$1['${2:/* your code here */}']
+	function `Filename()`_menu_alter(&$items) {
+	  // Example - disable the page at node/add
+	  /*
+	   *$items['node/add']['access callback'] = FALSE;
+	   */
+	  ${1:/* Your code here */}
 	}
-
-snippet hook_node_info
-	/**
-	 * Implements hook_node_info().
-	 */
-	function `Filename()`_node_info() {
-	  return array(
-	    '${1:/* machine-readable name */}' => array(
-	      'name' => t('${2:/* human-readable name */}'),
-	      'module' => '`Filename()`',
-	      'description' => t('${3:/* description */}'),
-	    ),
-	  );
-	}
-
 snippet hook_node_operations
 	/**
 	 * Implements hook_node_operations().
@@ -185,13 +216,22 @@ snippet hook_theme
 	 */
 	function `Filename()`_theme($existing, $type, $theme, $path) {
 	  return array(
-	    '${1:theme_function}' => array(
-	      'arguments' => array(${2:/* Theme function arguments */}),
-	      ${3:/* See for options */}
+	    /*
+	     *'forum_icon' => array(
+	     *  'variables' => array('new_posts' => NULL, 'num_posts' => 0, 'comment_mode' => 0, 'sticky' => 0),
+	     *),
+	     *'status_report' => array(
+	     *  'render element' => 'requirements',
+	     *  'file' => 'system.admin.inc',
+	     *),
+	     */
+	    '${1}' => array(
+	      'render element' => '${2}',
+	      'file' => '${3}',
+	      'variables' => array('${4}' => NULL, '${5}' => NULL${6}),
 	    ),
 	  );
 	}
-
 snippet hook_user_operations
 	/**
 	 * Implements hook_user_operations().
