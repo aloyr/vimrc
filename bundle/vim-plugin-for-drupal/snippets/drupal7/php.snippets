@@ -321,13 +321,9 @@ snippet watchdog NOTICE
 snippet watchdog WARNING
 	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:WARNING});${4}
 
-snippet watchdoc ERROR
+snippet watchdog ERROR
 	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:ERROR});${4}
 # debugging functions
-snippet wda
-	watchdog('${1: Name }', '<pre>' . var_export(\${2: $message }, TRUE) . '</pre');
-snippet dsm
-	drupal_set_message(${1:'Got here!'}, 'status');${2}
 
 snippet ddump
 	drupal_set_message('<pre class="ddump">' . print_r(${1:$someVar}, TRUE) . '</pre>');${2}

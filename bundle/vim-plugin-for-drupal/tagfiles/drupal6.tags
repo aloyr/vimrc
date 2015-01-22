@@ -62,7 +62,9 @@ Drupal.ACDB	$DRUPAL_ROOT/misc/autocomplete.js	/^};$/;"	c
 Drupal.ACDB.cancel	$DRUPAL_ROOT/misc/autocomplete.js	/^Drupal.ACDB.prototype.cancel = function() {$/;"	m
 Drupal.ACDB.search	$DRUPAL_ROOT/misc/autocomplete.js	/^Drupal.ACDB.prototype.search = function (searchString) {$/;"	m
 Drupal.ahah	$DRUPAL_ROOT/misc/ahah.js	/^};$/;"	c
+Drupal.ahah.beforeSend	$DRUPAL_ROOT/misc/ahah.js	/^Drupal.ahah.prototype.beforeSend = function (request, options) {$/;"	m
 Drupal.ahah.beforeSubmit	$DRUPAL_ROOT/misc/ahah.js	/^Drupal.ahah.prototype.beforeSubmit = function (form_values, element, options) {$/;"	m
+Drupal.ahah.complete	$DRUPAL_ROOT/misc/ahah.js	/^Drupal.ahah.prototype.complete = function (response, status) {$/;"	m
 Drupal.ahah.error	$DRUPAL_ROOT/misc/ahah.js	/^Drupal.ahah.prototype.error = function (response, uri) {$/;"	m
 Drupal.ahah.options.url	$DRUPAL_ROOT/misc/ahah.js	/^  var options = {$/;"	p
 Drupal.ahah.success	$DRUPAL_ROOT/misc/ahah.js	/^Drupal.ahah.prototype.success = function (response, status) {$/;"	m
@@ -196,6 +198,7 @@ FILE_WRITABLE	$DRUPAL_ROOT/includes/install.inc	/^define('FILE_WRITABLE',       
 FILTER_FORMAT_DEFAULT	$DRUPAL_ROOT/modules/filter/filter.module	/^define('FILTER_FORMAT_DEFAULT', 0);$/;"	d
 FILTER_HTML_ESCAPE	$DRUPAL_ROOT/modules/filter/filter.module	/^define('FILTER_HTML_ESCAPE', 2);$/;"	d
 FILTER_HTML_STRIP	$DRUPAL_ROOT/modules/filter/filter.module	/^define('FILTER_HTML_STRIP', 1);$/;"	d
+HTTP_REQUEST_TIMEOUT	$DRUPAL_ROOT/includes/common.inc	/^define('HTTP_REQUEST_TIMEOUT', -1);$/;"	d
 LANGUAGE_LTR	$DRUPAL_ROOT/includes/bootstrap.inc	/^define('LANGUAGE_LTR', 0);$/;"	d
 LANGUAGE_NEGOTIATION_DOMAIN	$DRUPAL_ROOT/includes/bootstrap.inc	/^define('LANGUAGE_NEGOTIATION_DOMAIN', 3);$/;"	d
 LANGUAGE_NEGOTIATION_NONE	$DRUPAL_ROOT/includes/bootstrap.inc	/^define('LANGUAGE_NEGOTIATION_NONE', 0);$/;"	d
@@ -276,7 +279,22 @@ UPDATE_NOT_SUPPORTED	$DRUPAL_ROOT/modules/update/update.module	/^define('UPDATE_
 UPDATE_REVOKED	$DRUPAL_ROOT/modules/update/update.module	/^define('UPDATE_REVOKED', 2);$/;"	d
 UPDATE_UNKNOWN	$DRUPAL_ROOT/modules/update/update.module	/^define('UPDATE_UNKNOWN', -2);$/;"	d
 USERNAME_MAX_LENGTH	$DRUPAL_ROOT/modules/user/user.module	/^define('USERNAME_MAX_LENGTH', 60);$/;"	d
-VERSION	$DRUPAL_ROOT/modules/system/system.module	/^define('VERSION', '6.22');$/;"	d
+UserRolesAssignmentTestCase-1.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-1.html	1;"	F
+UserRolesAssignmentTestCase-10.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-10.html	1;"	F
+UserRolesAssignmentTestCase-11.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-11.html	1;"	F
+UserRolesAssignmentTestCase-12.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-12.html	1;"	F
+UserRolesAssignmentTestCase-13.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-13.html	1;"	F
+UserRolesAssignmentTestCase-14.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-14.html	1;"	F
+UserRolesAssignmentTestCase-15.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-15.html	1;"	F
+UserRolesAssignmentTestCase-2.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-2.html	1;"	F
+UserRolesAssignmentTestCase-3.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-3.html	1;"	F
+UserRolesAssignmentTestCase-4.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-4.html	1;"	F
+UserRolesAssignmentTestCase-5.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-5.html	1;"	F
+UserRolesAssignmentTestCase-6.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-6.html	1;"	F
+UserRolesAssignmentTestCase-7.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-7.html	1;"	F
+UserRolesAssignmentTestCase-8.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-8.html	1;"	F
+UserRolesAssignmentTestCase-9.html	$DRUPAL_ROOT/sites/d7test.local/files/simpletest/verbose/UserRolesAssignmentTestCase-9.html	1;"	F
+VERSION	$DRUPAL_ROOT/modules/system/system.module	/^define('VERSION', '6.34');$/;"	d
 WATCHDOG_ALERT	$DRUPAL_ROOT/includes/bootstrap.inc	/^define('WATCHDOG_ALERT', 1);$/;"	d
 WATCHDOG_CRITICAL	$DRUPAL_ROOT/includes/bootstrap.inc	/^define('WATCHDOG_CRITICAL', 2);$/;"	d
 WATCHDOG_DEBUG	$DRUPAL_ROOT/includes/bootstrap.inc	/^define('WATCHDOG_DEBUG', 7);$/;"	d
@@ -650,6 +668,7 @@ and	$DRUPAL_ROOT/includes/theme.inc	/^      \/\/ if function and file are left o
 and	$DRUPAL_ROOT/includes/theme.inc	/^    \/\/ default render function and extension.$/;"	f
 and	$DRUPAL_ROOT/modules/locale/locale.module	/^    'description' => 'Translate the built in interface and optionally other text.',$/;"	i
 and	$DRUPAL_ROOT/modules/translation/translation.module	/^      $output .= '<p>'. t('Use the <a href="@blocks">language switcher block<\/a> provided by locale module to allow users to select a language. If available, both the site interface and site content are presented in the language selected.', array('@blocks' => url('admin\/build\/block'))) .'<\/p>';$/;"	i
+and	$DRUPAL_ROOT/sites/d7test.local/settings.php	/^ * block IP addresses from within the administrative interface and before any$/;"	i
 are	$DRUPAL_ROOT/modules/update/update.compare.inc	/^ * The results of this function are expensive to compute, especially on sites$/;"	f
 arg	$DRUPAL_ROOT/includes/path.inc	/^function arg($index = NULL, $path = NULL) {$/;"	f
 arguments	$DRUPAL_ROOT/includes/form.inc	/^  \/\/ We store the original function arguments, rather than the final $arg$/;"	f
@@ -671,6 +690,7 @@ batch_process	$DRUPAL_ROOT/includes/form.inc	/^function batch_process($redirect 
 batch_set	$DRUPAL_ROOT/includes/form.inc	/^function batch_set($batch_definition) {$/;"	f
 batch_test_finished	$DRUPAL_ROOT/includes/form.inc	/^ * function batch_test_finished($success, $results, $operations) {$/;"	f
 bcpowmod	$DRUPAL_ROOT/modules/openid/openid.inc	/^  function bcpowmod($base, $exp, $mod) {$/;"	f
+because	$DRUPAL_ROOT/includes/bootstrap.inc	/^ * PHP function because it can return a long string of bytes (compared to < 4$/;"	f
 block-admin-display-form.tpl.php	$DRUPAL_ROOT/modules/block/block-admin-display-form.tpl.php	1;"	F
 block.admin.inc	$DRUPAL_ROOT/modules/block/block.admin.inc	1;"	F
 block.install	$DRUPAL_ROOT/modules/block/block.install	1;"	F
@@ -795,7 +815,7 @@ book_menu_subtree_data	$DRUPAL_ROOT/modules/book/book.module	/^function book_men
 book_next	$DRUPAL_ROOT/modules/book/book.module	/^function book_next($book_link) {$/;"	f
 book_node_export	$DRUPAL_ROOT/modules/book/book.module	/^function book_node_export($node, $children = '') {$/;"	f
 book_node_type	$DRUPAL_ROOT/modules/book/book.module	/^function book_node_type($op, $type) {$/;"	f
-book_nodeapi	$DRUPAL_ROOT/modules/book/book.module	/^function book_nodeapi(&$node, $op, $teaser, $page) {$/;"	f
+book_nodeapi	$DRUPAL_ROOT/modules/book/book.module	/^function book_nodeapi(&$node, $op, $teaser = NULL, $page = NULL) {$/;"	f
 book_outline	$DRUPAL_ROOT/modules/book/book.pages.inc	/^function book_outline($node) {$/;"	f
 book_outline_form	$DRUPAL_ROOT/modules/book/book.pages.inc	/^function book_outline_form(&$form_state, $node) {$/;"	f
 book_outline_form_submit	$DRUPAL_ROOT/modules/book/book.pages.inc	/^function book_outline_form_submit($form, &$form_state) {$/;"	f
@@ -831,6 +851,7 @@ cache_set	$DRUPAL_ROOT/includes/cache.inc	/^function cache_set($cid, $data, $tab
 call	$DRUPAL_ROOT/includes/actions.inc	/^ * using the function call $function($object, $context, $a1, $a2)$/;"	f
 call	$DRUPAL_ROOT/includes/batch.inc	/^      \/\/ Build the 'context' array, execute the function call,$/;"	f
 call	$DRUPAL_ROOT/includes/bootstrap.inc	/^  \/\/ function call, since check_plain() may be called hundreds of times during$/;"	f
+call	$DRUPAL_ROOT/includes/common.inc	/^ *   A float representing the maximum number of seconds the function call may$/;"	f
 callback	$DRUPAL_ROOT/modules/book/book.module	/^ *   A function callback to be called upon visiting a node in the tree.$/;"	f
 calls	$DRUPAL_ROOT/includes/form.inc	/^ *   - 'operations': Array of function calls to be performed.$/;"	f
 can	$DRUPAL_ROOT/includes/bootstrap.inc	/^  \/\/ another so PHP's header() function can deal with duplicate$/;"	f
@@ -853,6 +874,7 @@ check_markup	$DRUPAL_ROOT/modules/filter/filter.module	/^function check_markup($
 check_plain	$DRUPAL_ROOT/includes/bootstrap.inc	/^function check_plain($text) {$/;"	f
 check_url	$DRUPAL_ROOT/includes/common.inc	/^function check_url($uri) {$/;"	f
 checks	$DRUPAL_ROOT/modules/locale/locale.module	/^ * This function checks all JavaScript files currently added via drupal_add_js()$/;"	f
+claimed	$DRUPAL_ROOT/modules/path/path.module	/^  \/* This function claimed to prevent duplicate aliases but has not done$/;"	f
 clears	$DRUPAL_ROOT/includes/form.inc	/^ * This function clears $_POST and passes the empty $_POST to the form_builder.$/;"	f
 code	$DRUPAL_ROOT/includes/database.inc	/^ * Wrapper for database interface code.$/;"	i
 code	$DRUPAL_ROOT/includes/database.mysql.inc	/^ * Database interface code for MySQL database servers.$/;"	i
@@ -939,6 +961,8 @@ comment_update_1	$DRUPAL_ROOT/modules/comment/comment.install	/^function comment
 comment_update_6001	$DRUPAL_ROOT/modules/comment/comment.install	/^function comment_update_6001() {$/;"	f
 comment_update_6002	$DRUPAL_ROOT/modules/comment/comment.install	/^function comment_update_6002() {$/;"	f
 comment_update_6003	$DRUPAL_ROOT/modules/comment/comment.install	/^function comment_update_6003() {$/;"	f
+comment_update_6004	$DRUPAL_ROOT/modules/comment/comment.install	/^function comment_update_6004() {$/;"	f
+comment_update_6005	$DRUPAL_ROOT/modules/comment/comment.install	/^function comment_update_6005() {$/;"	f
 comment_user	$DRUPAL_ROOT/modules/comment/comment.module	/^function comment_user($type, $edit, &$user, $category = NULL) {$/;"	f
 comment_validate	$DRUPAL_ROOT/modules/comment/comment.module	/^function comment_validate($edit) {$/;"	f
 common.inc	$DRUPAL_ROOT/includes/common.inc	1;"	F
@@ -984,7 +1008,7 @@ database.mysql-common.inc	$DRUPAL_ROOT/includes/database.mysql-common.inc	1;"	F
 database.mysql.inc	$DRUPAL_ROOT/includes/database.mysql.inc	1;"	F
 database.mysqli.inc	$DRUPAL_ROOT/includes/database.mysqli.inc	1;"	F
 database.pgsql.inc	$DRUPAL_ROOT/includes/database.pgsql.inc	1;"	F
-date_validate	$DRUPAL_ROOT/includes/form.inc	/^function date_validate($form) {$/;"	f
+date_validate	$DRUPAL_ROOT/includes/form.inc	/^function date_validate($element) {$/;"	f
 db_add_column	$DRUPAL_ROOT/update.php	/^function db_add_column(&$ret, $table, $column, $type, $attributes = array()) {$/;"	f
 db_add_field	$DRUPAL_ROOT/includes/database.mysql-common.inc	/^function db_add_field(&$ret, $table, $field, $spec, $keys_new = array()) {$/;"	f
 db_add_field	$DRUPAL_ROOT/includes/database.pgsql.inc	/^function db_add_field(&$ret, $table, $field, $spec, $new_keys = array()) {$/;"	f
@@ -1132,6 +1156,7 @@ drupal_add_tabledrag	$DRUPAL_ROOT/includes/common.inc	/^function drupal_add_tabl
 drupal_alter	$DRUPAL_ROOT/includes/common.inc	/^function drupal_alter($type, &$data) {$/;"	f
 drupal_anonymous_user	$DRUPAL_ROOT/includes/bootstrap.inc	/^function drupal_anonymous_user($session = '') {$/;"	f
 drupal_attributes	$DRUPAL_ROOT/includes/common.inc	/^function drupal_attributes($attributes = array()) {$/;"	f
+drupal_base64_encode	$DRUPAL_ROOT/includes/bootstrap.inc	/^function drupal_base64_encode($string) {$/;"	f
 drupal_bootstrap	$DRUPAL_ROOT/includes/bootstrap.inc	/^function drupal_bootstrap($phase) {$/;"	f
 drupal_build_css_cache	$DRUPAL_ROOT/includes/common.inc	/^function drupal_build_css_cache($types, $filename) {$/;"	f
 drupal_build_js_cache	$DRUPAL_ROOT/includes/common.inc	/^function drupal_build_js_cache($files, $filename) {$/;"	f
@@ -1182,7 +1207,7 @@ drupal_get_token	$DRUPAL_ROOT/includes/common.inc	/^function drupal_get_token($v
 drupal_goto	$DRUPAL_ROOT/includes/common.inc	/^function drupal_goto($path = '', $query = NULL, $fragment = NULL, $http_response_code = 302) {$/;"	f
 drupal_help_arg	$DRUPAL_ROOT/includes/menu.inc	/^function drupal_help_arg($arg = array()) {$/;"	f
 drupal_html_to_text	$DRUPAL_ROOT/includes/mail.inc	/^function drupal_html_to_text($string, $allowed_tags = NULL) {$/;"	f
-drupal_http_request	$DRUPAL_ROOT/includes/common.inc	/^function drupal_http_request($url, $headers = array(), $method = 'GET', $data = NULL, $retry = 3) {$/;"	f
+drupal_http_request	$DRUPAL_ROOT/includes/common.inc	/^function drupal_http_request($url, $headers = array(), $method = 'GET', $data = NULL, $retry = 3, $timeout = 30.0) {$/;"	f
 drupal_implode_tags	$DRUPAL_ROOT/includes/common.inc	/^function drupal_implode_tags($tags) {$/;"	f
 drupal_init_language	$DRUPAL_ROOT/includes/bootstrap.inc	/^function drupal_init_language() {$/;"	f
 drupal_init_path	$DRUPAL_ROOT/includes/path.inc	/^function drupal_init_path() {$/;"	f
@@ -1212,6 +1237,8 @@ drupal_parse_info_file	$DRUPAL_ROOT/includes/common.inc	/^function drupal_parse_
 drupal_prepare_form	$DRUPAL_ROOT/includes/form.inc	/^function drupal_prepare_form($form_id, &$form, &$form_state) {$/;"	f
 drupal_process_form	$DRUPAL_ROOT/includes/form.inc	/^function drupal_process_form($form_id, &$form, &$form_state) {$/;"	f
 drupal_query_string_encode	$DRUPAL_ROOT/includes/common.inc	/^function drupal_query_string_encode($query, $exclude = array(), $parent = '') {$/;"	f
+drupal_random_bytes	$DRUPAL_ROOT/includes/bootstrap.inc	/^function drupal_random_bytes($count) {$/;"	f
+drupal_random_key	$DRUPAL_ROOT/includes/bootstrap.inc	/^function drupal_random_key($byte_count = 32) {$/;"	f
 drupal_rebuild_form	$DRUPAL_ROOT/includes/form.inc	/^function drupal_rebuild_form($form_id, &$form_state, $args, $form_build_id = NULL) {$/;"	f
 drupal_rebuild_theme_registry	$DRUPAL_ROOT/includes/theme.inc	/^function drupal_rebuild_theme_registry() {$/;"	f
 drupal_redirect_form	$DRUPAL_ROOT/includes/form.inc	/^function drupal_redirect_form($form, $redirect = NULL) {$/;"	f
@@ -1302,6 +1329,7 @@ file_check_location	$DRUPAL_ROOT/includes/file.inc	/^function file_check_locatio
 file_check_path	$DRUPAL_ROOT/includes/file.inc	/^function file_check_path(&$path) {$/;"	f
 file_copy	$DRUPAL_ROOT/includes/file.inc	/^function file_copy(&$source, $dest = 0, $replace = FILE_EXISTS_RENAME) {$/;"	f
 file_create_filename	$DRUPAL_ROOT/includes/file.inc	/^function file_create_filename($basename, $directory) {$/;"	f
+file_create_htaccess	$DRUPAL_ROOT/includes/file.inc	/^function file_create_htaccess($directory, $form_item = NULL, $force_overwrite = FALSE) {$/;"	f
 file_create_path	$DRUPAL_ROOT/includes/file.inc	/^function file_create_path($dest = 0) {$/;"	f
 file_create_url	$DRUPAL_ROOT/includes/file.inc	/^function file_create_url($path) {$/;"	f
 file_delete	$DRUPAL_ROOT/includes/file.inc	/^function file_delete($path) {$/;"	f
@@ -1309,7 +1337,10 @@ file_destination	$DRUPAL_ROOT/includes/file.inc	/^function file_destination($des
 file_directory_path	$DRUPAL_ROOT/includes/file.inc	/^function file_directory_path() {$/;"	f
 file_directory_temp	$DRUPAL_ROOT/includes/file.inc	/^function file_directory_temp() {$/;"	f
 file_download	$DRUPAL_ROOT/includes/file.inc	/^function file_download() {$/;"	f
+file_download_access	$DRUPAL_ROOT/includes/file.inc	/^function file_download_access($filepath) {$/;"	f
+file_download_headers	$DRUPAL_ROOT/includes/file.inc	/^function file_download_headers($filepath) {$/;"	f
 file_get_mimetype	$DRUPAL_ROOT/includes/file.inc	/^function file_get_mimetype($filename, $mapping = NULL) {$/;"	f
+file_htaccess_lines	$DRUPAL_ROOT/includes/file.inc	/^function file_htaccess_lines() {$/;"	f
 file_move	$DRUPAL_ROOT/includes/file.inc	/^function file_move(&$source, $dest = 0, $replace = FILE_EXISTS_RENAME) {$/;"	f
 file_munge_filename	$DRUPAL_ROOT/includes/file.inc	/^function file_munge_filename($filename, $extensions, $alerts = TRUE) {$/;"	f
 file_save_data	$DRUPAL_ROOT/includes/file.inc	/^function file_save_data($data, $dest, $replace = FILE_EXISTS_RENAME) {$/;"	f
@@ -1444,6 +1475,7 @@ for	$DRUPAL_ROOT/modules/user/user.pages.inc	/^ * Submit function for the user a
 for	$DRUPAL_ROOT/modules/user/user.pages.inc	/^ * Validation function for the user account and profile editing form.$/;"	f
 form.inc	$DRUPAL_ROOT/includes/form.inc	1;"	F
 form.js	$DRUPAL_ROOT/misc/form.js	1;"	F
+form_build_id_map	$DRUPAL_ROOT/includes/form.inc	/^function form_build_id_map($form_build_id, $new_build_id = NULL) {$/;"	f
 form_builder	$DRUPAL_ROOT/includes/form.inc	/^function form_builder($form_id, $form, &$form_state) {$/;"	f
 form_clean_id	$DRUPAL_ROOT/includes/form.inc	/^function form_clean_id($id = NULL, $flush = FALSE) {$/;"	f
 form_error	$DRUPAL_ROOT/includes/form.inc	/^function form_error(&$element, $message = '') {$/;"	f
@@ -1504,7 +1536,7 @@ forum_install	$DRUPAL_ROOT/modules/forum/forum.install	/^function forum_install(
 forum_load	$DRUPAL_ROOT/modules/forum/forum.module	/^function forum_load($node) {$/;"	f
 forum_menu	$DRUPAL_ROOT/modules/forum/forum.module	/^function forum_menu() {$/;"	f
 forum_node_info	$DRUPAL_ROOT/modules/forum/forum.module	/^function forum_node_info() {$/;"	f
-forum_nodeapi	$DRUPAL_ROOT/modules/forum/forum.module	/^function forum_nodeapi(&$node, $op, $teaser, $page) {$/;"	f
+forum_nodeapi	$DRUPAL_ROOT/modules/forum/forum.module	/^function forum_nodeapi(&$node, $op, $teaser = NULL, $page = NULL) {$/;"	f
 forum_overview	$DRUPAL_ROOT/modules/forum/forum.admin.inc	/^function forum_overview(&$form_state) {$/;"	f
 forum_page	$DRUPAL_ROOT/modules/forum/forum.pages.inc	/^function forum_page($tid = 0) {$/;"	f
 forum_perm	$DRUPAL_ROOT/modules/forum/forum.module	/^function forum_perm() {$/;"	f
@@ -1518,6 +1550,7 @@ forum_update_6000	$DRUPAL_ROOT/modules/forum/forum.install	/^function forum_upda
 forums.tpl.php	$DRUPAL_ROOT/modules/forum/forums.tpl.php	1;"	F
 from	$DRUPAL_ROOT/modules/throttle/throttle.module	/^ * Call the throttle_status() function from your own modules, themes, blocks,$/;"	f
 garland_preprocess_comment_wrapper	$DRUPAL_ROOT/themes/garland/template.php	/^function garland_preprocess_comment_wrapper(&$vars) {$/;"	f
+generates	$DRUPAL_ROOT/modules/user/user.admin.inc	/^ * This function generates the user registration, multiple user cancellation,$/;"	f
 get_t	$DRUPAL_ROOT/includes/bootstrap.inc	/^function get_t() {$/;"	f
 gets	$DRUPAL_ROOT/profiles/default/default.profile	/^ * this function gets called with $task set to 'profile', and you$/;"	f
 handles	$DRUPAL_ROOT/includes/form.inc	/^ * The drupal_get_form() function handles retrieving, processing, and$/;"	f
@@ -1534,6 +1567,7 @@ help_main	$DRUPAL_ROOT/modules/help/help.admin.inc	/^function help_main() {$/;"	
 help_menu	$DRUPAL_ROOT/modules/help/help.module	/^function help_menu() {$/;"	f
 help_page	$DRUPAL_ROOT/modules/help/help.admin.inc	/^function help_page($name) {$/;"	f
 helps	$DRUPAL_ROOT/includes/common.inc	/^ * page using drupal_add_js() directly, this function helps keep template files$/;"	f
+hinges	$DRUPAL_ROOT/includes/file.inc	/^ * The return value of this function hinges on the return value from$/;"	f
 if	$DRUPAL_ROOT/includes/common.inc	/^ * internal links output by modules should be generated by this function if$/;"	f
 if	$DRUPAL_ROOT/includes/database.mysql.inc	/^ * Only use this function if exactly one field is being selected; otherwise,$/;"	f
 if	$DRUPAL_ROOT/includes/database.mysqli.inc	/^ * Only use this function if exactly one field is being selected; otherwise,$/;"	f
@@ -1601,6 +1635,7 @@ ip_address	$DRUPAL_ROOT/includes/bootstrap.inc	/^function ip_address() {$/;"	f
 is	$DRUPAL_ROOT/includes/bootstrap.inc	/^  \/\/ Because this function is called for every page request, both cached$/;"	f
 is	$DRUPAL_ROOT/includes/bootstrap.inc	/^  \/\/ the database.  This is required because this function is called both$/;"	f
 is	$DRUPAL_ROOT/includes/bootstrap.inc	/^ * If the function is called with no arguments, this function returns all set$/;"	f
+is	$DRUPAL_ROOT/includes/bootstrap.inc	/^ * This function is better than simply calling mt_rand() or any other built-in$/;"	f
 is	$DRUPAL_ROOT/includes/common.inc	/^  \/\/ When this function is called during Drupal's initial installation process,$/;"	f
 is	$DRUPAL_ROOT/includes/common.inc	/^ *   "http:\/\/example.com\/foo". After the url() function is called to construct$/;"	f
 is	$DRUPAL_ROOT/includes/common.inc	/^ * This function is NOT for placing arbitrary module-specific settings. Use$/;"	f
@@ -1618,6 +1653,8 @@ is	$DRUPAL_ROOT/includes/menu.inc	/^ * Callbacks simply register a path so that 
 is	$DRUPAL_ROOT/includes/menu.inc	/^ * The found callback function is called with any arguments specified$/;"	f
 is	$DRUPAL_ROOT/includes/menu.inc	/^ * The function is a bit complex because the rendering of an item depends on$/;"	f
 is	$DRUPAL_ROOT/includes/menu.inc	/^ * This function is similar to _menu_translate() but does link-specific$/;"	f
+is	$DRUPAL_ROOT/includes/session.inc	/^ * This function is an internal function and must not be called directly.$/;"	f
+is	$DRUPAL_ROOT/includes/session.inc	/^ * This function is registered with session_set_save_handler() to support$/;"	f
 is	$DRUPAL_ROOT/includes/theme.inc	/^ * This function is designed for use from within themes & engines$/;"	f
 is	$DRUPAL_ROOT/includes/theme.inc	/^ * function is useful to initialize a theme when no database is present.$/;"	f
 is	$DRUPAL_ROOT/includes/theme.inc	/^ * on where the theming function is handled. If implemented from a module, it$/;"	f
@@ -1655,6 +1692,8 @@ itself	$DRUPAL_ROOT/includes/form.inc	/^  \/\/ the constructor function itself. 
 jQuery._farbtastic	$DRUPAL_ROOT/misc/farbtastic/farbtastic.js	/^};$/;"	f
 jQuery.farbtastic	$DRUPAL_ROOT/misc/farbtastic/farbtastic.js	/^};$/;"	f
 jQuery.fn.farbtastic	$DRUPAL_ROOT/misc/farbtastic/farbtastic.js	/^\/\/ Farbtastic 1.2$/;"	f
+jQuery.fn.init	$DRUPAL_ROOT/misc/drupal.js	/^  var jquery_init = jQuery.fn.init;$/;"	f
+jQuery.fn.init	$DRUPAL_ROOT/misc/drupal.js	/^  };$/;"	c
 jquery.form.js	$DRUPAL_ROOT/misc/jquery.form.js	1;"	F
 jquery.js	$DRUPAL_ROOT/misc/jquery.js	1;"	F
 just	$DRUPAL_ROOT/includes/menu.inc	/^ * Local tasks function just as other menu items in most respects. It is$/;"	f
@@ -1730,14 +1769,22 @@ locale_update_6003	$DRUPAL_ROOT/modules/locale/locale.install	/^function locale_
 locale_update_6004	$DRUPAL_ROOT/modules/locale/locale.install	/^function locale_update_6004() {$/;"	f
 locale_update_6005	$DRUPAL_ROOT/modules/locale/locale.install	/^function locale_update_6005() {$/;"	f
 locale_update_6006	$DRUPAL_ROOT/modules/locale/locale.install	/^function locale_update_6006() {$/;"	f
+locale_update_6007	$DRUPAL_ROOT/modules/locale/locale.install	/^function locale_update_6007() {$/;"	f
 locale_update_js_files	$DRUPAL_ROOT/modules/locale/locale.module	/^function locale_update_js_files() {$/;"	f
 locale_user	$DRUPAL_ROOT/modules/locale/locale.module	/^function locale_user($type, $edit, &$user, $category = NULL) {$/;"	f
+lock-install.inc	$DRUPAL_ROOT/includes/lock-install.inc	1;"	F
 lock.inc	$DRUPAL_ROOT/includes/lock.inc	1;"	F
+lock_acquire	$DRUPAL_ROOT/includes/lock-install.inc	/^function lock_acquire($name, $timeout = 30.0) {$/;"	f
 lock_acquire	$DRUPAL_ROOT/includes/lock.inc	/^function lock_acquire($name, $timeout = 30.0) {$/;"	f
+lock_init	$DRUPAL_ROOT/includes/lock-install.inc	/^function lock_init() {$/;"	f
 lock_init	$DRUPAL_ROOT/includes/lock.inc	/^function lock_init() {$/;"	f
+lock_may_be_available	$DRUPAL_ROOT/includes/lock-install.inc	/^function lock_may_be_available($name) {$/;"	f
 lock_may_be_available	$DRUPAL_ROOT/includes/lock.inc	/^function lock_may_be_available($name) {$/;"	f
+lock_release	$DRUPAL_ROOT/includes/lock-install.inc	/^function lock_release($name) {$/;"	f
 lock_release	$DRUPAL_ROOT/includes/lock.inc	/^function lock_release($name) {$/;"	f
+lock_release_all	$DRUPAL_ROOT/includes/lock-install.inc	/^function lock_release_all($lock_id = NULL) {$/;"	f
 lock_release_all	$DRUPAL_ROOT/includes/lock.inc	/^function lock_release_all($lock_id = NULL) {$/;"	f
+lock_wait	$DRUPAL_ROOT/includes/lock-install.inc	/^function lock_wait($name, $delay = 30) {$/;"	f
 lock_wait	$DRUPAL_ROOT/includes/lock.inc	/^function lock_wait($name, $delay = 30) {$/;"	f
 mail.inc	$DRUPAL_ROOT/includes/mail.inc	1;"	F
 maintenance-page.tpl.php	$DRUPAL_ROOT/modules/system/maintenance-page.tpl.php	1;"	F
@@ -2036,6 +2083,7 @@ openid_redirect_http	$DRUPAL_ROOT/modules/openid/openid.inc	/^function openid_re
 openid_schema	$DRUPAL_ROOT/modules/openid/openid.install	/^function openid_schema() {$/;"	f
 openid_uninstall	$DRUPAL_ROOT/modules/openid/openid.install	/^function openid_uninstall() {$/;"	f
 openid_update_6000	$DRUPAL_ROOT/modules/openid/openid.install	/^function openid_update_6000() {$/;"	f
+openid_update_6001	$DRUPAL_ROOT/modules/openid/openid.install	/^function openid_update_6001() {$/;"	f
 openid_user	$DRUPAL_ROOT/modules/openid/openid.module	/^function openid_user($op, &$edit, &$account, $category = NULL) {$/;"	f
 openid_user_add	$DRUPAL_ROOT/modules/openid/openid.pages.inc	/^function openid_user_add() {$/;"	f
 openid_user_add_submit	$DRUPAL_ROOT/modules/openid/openid.pages.inc	/^function openid_user_add_submit($form, &$form_state) {$/;"	f
@@ -2087,7 +2135,7 @@ path_form_alter	$DRUPAL_ROOT/modules/path/path.module	/^function path_form_alter
 path_help	$DRUPAL_ROOT/modules/path/path.module	/^function path_help($path, $arg) {$/;"	f
 path_load	$DRUPAL_ROOT/modules/path/path.module	/^function path_load($pid) {$/;"	f
 path_menu	$DRUPAL_ROOT/modules/path/path.module	/^function path_menu() {$/;"	f
-path_nodeapi	$DRUPAL_ROOT/modules/path/path.module	/^function path_nodeapi(&$node, $op, $arg) {$/;"	f
+path_nodeapi	$DRUPAL_ROOT/modules/path/path.module	/^function path_nodeapi(&$node, $op, $arg = NULL) {$/;"	f
 path_perm	$DRUPAL_ROOT/modules/path/path.module	/^function path_perm() {$/;"	f
 path_set_alias	$DRUPAL_ROOT/modules/path/path.module	/^function path_set_alias($path = NULL, $alias = NULL, $pid = NULL, $language = '') {$/;"	f
 path_to_theme	$DRUPAL_ROOT/includes/theme.inc	/^function path_to_theme() {$/;"	f
@@ -2205,7 +2253,9 @@ relies	$DRUPAL_ROOT/modules/update/update.compare.inc	/^ * This function relies 
 repeatedly	$DRUPAL_ROOT/includes/module.inc	/^ * Call a function repeatedly with each module in turn as an argument.$/;"	f
 request_uri	$DRUPAL_ROOT/includes/bootstrap.inc	/^function request_uri() {$/;"	f
 requires	$DRUPAL_ROOT/includes/database.pgsql.inc	/^ * Note: This function requires PostgreSQL 7.2 or later.$/;"	f
+responsible	$DRUPAL_ROOT/includes/file.inc	/^ * file_download_headers(), which is the function responsible for collecting$/;"	f
 return	$DRUPAL_ROOT/includes/menu.inc	/^ *   a non existing node) then this function return FALSE.$/;"	f
+returns	$DRUPAL_ROOT/modules/node/node.module	/^ *   function returns FALSE. Otherwise, the return value depends on the$/;"	f
 returns	$DRUPAL_ROOT/modules/system/system.module	/^ * This function returns a complete form array for confirming an action. The$/;"	f
 runs	$DRUPAL_ROOT/update.php	/^ * This function runs when update.php is run the first time for 6.x,$/;"	f
 search-block-form.tpl.php	$DRUPAL_ROOT/modules/search/search-block-form.tpl.php	1;"	F
@@ -2268,6 +2318,7 @@ session_save_session	$DRUPAL_ROOT/includes/session.inc	/^function session_save_s
 sets	$DRUPAL_ROOT/includes/common.inc	/^ * This function sets the page cache if appropriate, and allows modules to$/;"	f
 sets	$DRUPAL_ROOT/includes/locale.inc	/^ * This function sets a refresh flag for a specified language, or all$/;"	f
 sets	$DRUPAL_ROOT/modules/system/system.module	/^ * The function sets the drupal_http_request_fail system variable to TRUE if$/;"	f
+settings.php	$DRUPAL_ROOT/sites/d7test.local/settings.php	1;"	F
 should	$DRUPAL_ROOT/includes/actions.inc	/^ * each action function should reference its configuration form, validate, and$/;"	f
 should	$DRUPAL_ROOT/includes/common.inc	/^ * - This function should only be used on paths, not on query string arguments,$/;"	f
 should	$DRUPAL_ROOT/includes/common.inc	/^ * Please note that this function should be called from the theme layer, such as$/;"	f
@@ -2312,6 +2363,7 @@ statistics_update_6000	$DRUPAL_ROOT/modules/statistics/statistics.install	/^func
 statistics_user	$DRUPAL_ROOT/modules/statistics/statistics.module	/^function statistics_user($op, &$edit, &$user) {$/;"	f
 statistics_user_tracker	$DRUPAL_ROOT/modules/statistics/statistics.pages.inc	/^function statistics_user_tracker() {$/;"	f
 strings	$DRUPAL_ROOT/includes/common.inc	/^ *    inaccurate since it is a mix of actual interface strings and various user$/;"	i
+strings	$DRUPAL_ROOT/sites/d7test.local/settings.php	/^ * a small number of your site's default English language interface strings.$/;"	i
 strings	$DRUPAL_ROOT/sites/default/default.settings.php	/^ * a small number of your site's default English language interface strings.$/;"	i
 syslog.install	$DRUPAL_ROOT/modules/syslog/syslog.install	1;"	F
 syslog.module	$DRUPAL_ROOT/modules/syslog/syslog.module	1;"	F
@@ -2535,13 +2587,13 @@ taxonomy_link	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_
 taxonomy_menu	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_menu() {$/;"	f
 taxonomy_node_delete	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_delete($node) {$/;"	f
 taxonomy_node_delete_revision	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_delete_revision($node) {$/;"	f
-taxonomy_node_get_terms	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_get_terms($node, $key = 'tid') {$/;"	f
+taxonomy_node_get_terms	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_get_terms($node, $key = 'tid', $reset = FALSE) {$/;"	f
 taxonomy_node_get_terms_by_vocabulary	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_get_terms_by_vocabulary($node, $vid, $key = 'tid') {$/;"	f
-taxonomy_node_save	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_save($node, $terms) {$/;"	f
+taxonomy_node_save	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_save(&$node, $terms) {$/;"	f
 taxonomy_node_type	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_type($op, $info) {$/;"	f
 taxonomy_node_update_index	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_update_index(&$node) {$/;"	f
 taxonomy_node_validate	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_node_validate(&$node) {$/;"	f
-taxonomy_nodeapi	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_nodeapi($node, $op, $arg = 0) {$/;"	f
+taxonomy_nodeapi	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^function taxonomy_nodeapi(&$node, $op, $arg = 0) {$/;"	f
 taxonomy_overview_terms	$DRUPAL_ROOT/modules/taxonomy/taxonomy.admin.inc	/^function taxonomy_overview_terms(&$form_state, $vocabulary) {$/;"	f
 taxonomy_overview_terms_submit	$DRUPAL_ROOT/modules/taxonomy/taxonomy.admin.inc	/^function taxonomy_overview_terms_submit($form, &$form_state) {$/;"	f
 taxonomy_overview_vocabularies	$DRUPAL_ROOT/modules/taxonomy/taxonomy.admin.inc	/^function taxonomy_overview_vocabularies() {$/;"	f
@@ -2829,14 +2881,14 @@ translation_link	$DRUPAL_ROOT/modules/translation/translation.module	/^function 
 translation_menu	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_menu() {$/;"	f
 translation_node_get_translations	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_node_get_translations($tnid) {$/;"	f
 translation_node_overview	$DRUPAL_ROOT/modules/translation/translation.pages.inc	/^function translation_node_overview($node) {$/;"	f
-translation_nodeapi	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_nodeapi(&$node, $op, $teaser, $page) {$/;"	f
+translation_nodeapi	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_nodeapi(&$node, $op, $teaser = NULL, $page = NULL) {$/;"	f
 translation_path_get_translations	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_path_get_translations($path) {$/;"	f
 translation_perm	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_perm() {$/;"	f
 translation_remove_from_set	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_remove_from_set($node) {$/;"	f
 translation_supported_type	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_supported_type($type) {$/;"	f
 translation_translation_link_alter	$DRUPAL_ROOT/modules/translation/translation.module	/^function translation_translation_link_alter(&$links, $path) {$/;"	f
-translations	$DRUPAL_ROOT/includes/locale.inc	/^        'error_message' => $t('Error importing interface translations'),$/;"	i
-translations	$DRUPAL_ROOT/includes/locale.inc	/^        'title'         => $t('Importing interface translations'),$/;"	i
+translations	$DRUPAL_ROOT/includes/locale.inc	/^      'error_message' => $t('Error importing interface translations'),$/;"	i
+translations	$DRUPAL_ROOT/includes/locale.inc	/^      'title'         => $t('Importing interface translations'),$/;"	i
 translations	$DRUPAL_ROOT/includes/locale.inc	/^    return confirm_form($form, t('Are you sure you want to delete the language %name?', array('%name' => t($languages[$langcode]->name))), 'admin\/settings\/language', t('Deleting a language will remove all interface translations associated with it, and posts in this language will be set to be language neutral. This action cannot be undone.'), t('Delete'), t('Cancel'));$/;"	i
 translations	$DRUPAL_ROOT/includes/locale.inc	/^ *   Text group to export PO file from (eg. 'default' for interface translations)$/;"	i
 translations	$DRUPAL_ROOT/includes/locale.inc	/^ *   Text group to import PO file into (eg. 'default' for interface translations)$/;"	i
@@ -2856,7 +2908,7 @@ trigger_forms	$DRUPAL_ROOT/modules/trigger/trigger.module	/^function trigger_for
 trigger_help	$DRUPAL_ROOT/modules/trigger/trigger.module	/^function trigger_help($path, $arg) {$/;"	f
 trigger_install	$DRUPAL_ROOT/modules/trigger/trigger.install	/^function trigger_install() {$/;"	f
 trigger_menu	$DRUPAL_ROOT/modules/trigger/trigger.module	/^function trigger_menu() {$/;"	f
-trigger_nodeapi	$DRUPAL_ROOT/modules/trigger/trigger.module	/^function trigger_nodeapi(&$node, $op, $a3, $a4) {$/;"	f
+trigger_nodeapi	$DRUPAL_ROOT/modules/trigger/trigger.module	/^function trigger_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {$/;"	f
 trigger_options	$DRUPAL_ROOT/modules/trigger/trigger.module	/^function trigger_options($type = 'all') {$/;"	f
 trigger_schema	$DRUPAL_ROOT/modules/trigger/trigger.install	/^function trigger_schema() {$/;"	f
 trigger_taxonomy	$DRUPAL_ROOT/modules/trigger/trigger.module	/^function trigger_taxonomy($op, $type, $array) {$/;"	f
@@ -2938,7 +2990,7 @@ upload_load	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_load($no
 upload_menu	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_menu() {$/;"	f
 upload_menu_alter	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_menu_alter(&$items) {$/;"	f
 upload_node_form_submit	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_node_form_submit(&$form, &$form_state) {$/;"	f
-upload_nodeapi	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_nodeapi(&$node, $op, $teaser) {$/;"	f
+upload_nodeapi	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_nodeapi(&$node, $op, $teaser = NULL) {$/;"	f
 upload_perm	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_perm() {$/;"	f
 upload_save	$DRUPAL_ROOT/modules/upload/upload.module	/^function upload_save(&$node) {$/;"	f
 upload_schema	$DRUPAL_ROOT/modules/upload/upload.install	/^function upload_schema() {$/;"	f
@@ -2999,6 +3051,7 @@ user_comment	$DRUPAL_ROOT/modules/user/user.module	/^function user_comment(&$com
 user_confirm_delete	$DRUPAL_ROOT/modules/user/user.pages.inc	/^function user_confirm_delete(&$form_state, $account) {$/;"	f
 user_confirm_delete_submit	$DRUPAL_ROOT/modules/user/user.pages.inc	/^function user_confirm_delete_submit($form, &$form_state) {$/;"	f
 user_delete	$DRUPAL_ROOT/modules/user/user.module	/^function user_delete($edit, $uid) {$/;"	f
+user_delete_access	$DRUPAL_ROOT/modules/user/user.module	/^function user_delete_access($account) {$/;"	f
 user_edit	$DRUPAL_ROOT/modules/user/user.pages.inc	/^function user_edit($account, $category = 'account') {$/;"	f
 user_edit_access	$DRUPAL_ROOT/modules/user/user.module	/^function user_edit_access($account) {$/;"	f
 user_edit_delete_submit	$DRUPAL_ROOT/modules/user/user.pages.inc	/^function user_edit_delete_submit($form, &$form_state) {$/;"	f
@@ -3036,7 +3089,7 @@ user_logout	$DRUPAL_ROOT/modules/user/user.pages.inc	/^function user_logout() {$
 user_mail	$DRUPAL_ROOT/modules/user/user.module	/^function user_mail($key, &$message, $params) {$/;"	f
 user_mail_tokens	$DRUPAL_ROOT/modules/user/user.module	/^function user_mail_tokens($account, $language) {$/;"	f
 user_menu	$DRUPAL_ROOT/modules/user/user.module	/^function user_menu() {$/;"	f
-user_module_invoke	$DRUPAL_ROOT/modules/user/user.module	/^function user_module_invoke($type, &$array, &$user, $category = NULL) {$/;"	f
+user_module_invoke	$DRUPAL_ROOT/modules/user/user.module	/^function user_module_invoke($op, &$edit, &$account, $category = NULL) {$/;"	f
 user_multiple_delete_confirm	$DRUPAL_ROOT/modules/user/user.module	/^function user_multiple_delete_confirm(&$form_state) {$/;"	f
 user_multiple_delete_confirm_submit	$DRUPAL_ROOT/modules/user/user.module	/^function user_multiple_delete_confirm_submit($form, &$form_state) {$/;"	f
 user_multiple_role_edit	$DRUPAL_ROOT/modules/user/user.module	/^function user_multiple_role_edit($accounts, $operation, $rid) {$/;"	f
@@ -3075,6 +3128,7 @@ user_validate_name	$DRUPAL_ROOT/modules/user/user.module	/^function user_validat
 user_validate_picture	$DRUPAL_ROOT/modules/user/user.module	/^function user_validate_picture(&$form, &$form_state) {$/;"	f
 user_view	$DRUPAL_ROOT/modules/user/user.pages.inc	/^function user_view($account) {$/;"	f
 user_view_access	$DRUPAL_ROOT/modules/user/user.module	/^function user_view_access($account) {$/;"	f
+uses	$DRUPAL_ROOT/modules/user/user.admin.inc	/^ *   function uses that value as the callback argument.$/;"	f
 using	$DRUPAL_ROOT/includes/actions.inc	/^ * functions should reference the action function using \\@see. For examples of$/;"	f
 using	$DRUPAL_ROOT/includes/form.inc	/^ * reference the form builder function using \\@see. For examples, of this see$/;"	f
 valid_email_address	$DRUPAL_ROOT/includes/common.inc	/^function valid_email_address($mail) {$/;"	f
@@ -3108,6 +3162,7 @@ will	$DRUPAL_ROOT/includes/module.inc	/^ * If module A depends on B which in tur
 will	$DRUPAL_ROOT/modules/locale/locale.module	/^ * This function will either import translation for the component change$/;"	f
 will	$DRUPAL_ROOT/modules/user/user.module	/^  \/\/ Cache $account - this load function will get called for each profile tab.$/;"	f
 will	$DRUPAL_ROOT/profiles/default/default.profile	/^ * this function will get called in every HTTP request (for form$/;"	f
+works	$DRUPAL_ROOT/modules/taxonomy/taxonomy.module	/^        \/\/ so that this function works the next time it gets called.$/;"	f
 written	$DRUPAL_ROOT/includes/actions.inc	/^ * where $function is the name of a function written in compliance with$/;"	f
 xmlrpc	$DRUPAL_ROOT/includes/common.inc	/^function xmlrpc($url) {$/;"	f
 xmlrpc.inc	$DRUPAL_ROOT/includes/xmlrpc.inc	1;"	F

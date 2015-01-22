@@ -13,6 +13,23 @@ augroup Drupal
   autocmd BufWinLeave * call s:ToggleWhitespaceMatch('BufWinLeave')
   autocmd InsertEnter * call s:ToggleWhitespaceMatch('InsertEnter')
   autocmd InsertLeave * call s:ToggleWhitespaceMatch('InsertLeave')
+  " Use :noautocmd because setting 'syntax' triggers a reload of all syntax
+  " files. Then source all ftplugin and syntax files for Drupal.
+  " For PHP files, we already called drupaldetect#Check() from the
+  " autocommands in filetype.vim. It may seem wasteful to call it again, but
+  " separating the initial filetype detection from adding '.drupal' seems like
+  " a more maintainable approach. Other scripts, notably twig-related ones,
+  " may also be manipulating the 'filetype' and 'syntax' options.
+  autocmd FileType *
+        \ if drupaldetect#Check() && &ft !~ '\<drupal\>' |
+          \ noautocmd let &ft .= '.drupal' |
+          \ runtime! ftplugin/drupal.vim |
+        \ endif
+  autocmd Syntax *
+        \ if drupaldetect#Check() && &syntax !~ '\<drupal\>' |
+          \ noautocmd let &syntax .= '.drupal' |
+          \ runtime! syntax/drupal.vim |
+        \ endif
 augroup END
 highlight default link drupalExtraWhitespace Error
 
@@ -47,6 +64,17 @@ endfunction " }}} }}}
 " output of "drush site-alias".
 command! -nargs=* -complete=custom,s:DrushComplete Drush call s:Drush(<q-args>)
 function! s:Drush(command) abort " {{{
+  let shortcommand = 'drush ' . a:command
+  let statusline = '%<[' . shortcommand . '] %h%m%r%=%-14.(%l,%c%V%) %P'
+
+  " If the vim-dispatch plugin is available, then let it do the job.
+  if exists(':Dispatch') == 2
+    " let &l:statusline = statusline
+    exe 'Dispatch drush' a:command
+    return
+  endif
+
+  " Since vim-dispatch is not available, we have to do it ourselves.
   " Open a new window. It is OK to quit without saving, and :w does nothing.
   new
   setlocal buftype=nofile bufhidden=hide noswapfile
@@ -56,12 +84,11 @@ function! s:Drush(command) abort " {{{
   " if exists(":AnsiEsc") == 2
     " AnsiEsc
   " endif
+  " Change the status line to list the command instead of '[Scratch]'.
+  let &l:statusline = statusline
   " Execute the command and grab the output. Clean it up.
   " TODO: Does the clean-up work on other OS's?
   let commandline = 'drush --nocolor ' . a:command
-  let shortcommand = 'drush ' . a:command
-  " Change the status line to list the command instead of '[Scratch]'.
-  let &l:statusline = '%<[' . shortcommand . '] %h%m%r%=%-14.(%l,%c%V%) %P'
   let out = system(commandline)
   let out = substitute(out, '\s*\r', '', 'g')
   " Add the command and output to our new scratch window.

@@ -183,6 +183,15 @@ let drupal#phpcs_exec = drupal#PhpcsPath()
 " @function! drupal#CodeSnifferPath() " {{{
 " Return path to Drupal standards for PHP CodeSniffer, or '' if not found.
 function! drupal#CodeSnifferPath() " {{{
+  " First check whether phpcs already knows about Drupal. If so, then return
+  " 'Drupal' instead of a complete path.
+  let standard = matchstr(system(g:drupal#phpcs_exec . ' -i'), '\c\<Drupal\>')
+  if strlen(standard)
+    return standard
+  endif
+  " Next, look for the Drupal standards in the locations corresponding to the
+  " instructions for installing the Coder module:
+  " https://www.drupal.org/node/1419988
   let dirs = [$HOME . '/.composer/vendor/drupal/', $HOME . '/.drush/']
   return s:FindPath(dirs, 'coder/coder_sniffer/Drupal', 'isdirectory(path)')
 endfun

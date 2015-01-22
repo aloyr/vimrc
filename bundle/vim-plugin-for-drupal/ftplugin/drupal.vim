@@ -68,6 +68,16 @@ if &ft =~ '\<php\>'
 endif
 " }}} PHP specific settings.
 
+" Vdebug settings. {{{
+if !exists('g:vdebug_features')
+  let g:vdebug_features = {}
+endif
+" Useful for Drupal's deeply nested arrays.
+if !exists('g:vdebug_features.max_children') || g:vdebug_features.max_children < 128
+  let g:vdebug_features.max_children = 128
+endif
+" }}} Vdebug settings.
+
 setl autoindent              "Auto indent based on previous line
 setl expandtab               "Tab key inserts spaces
 setl nojoinspaces            "No second space when joining lines that end in "."

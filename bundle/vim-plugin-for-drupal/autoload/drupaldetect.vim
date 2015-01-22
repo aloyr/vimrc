@@ -3,13 +3,31 @@
 
 " These functions are called from BufRead and BufNewFile autocommands, before
 " 'filetype' has been set. They are defined here, not in filetype.vim, so that
-" they are also available from other scripts." }}}
+" they are also available from other scripts. }}}
 
 " @var s:slash
 " Borrowed from autoload/pathogen.vim:
 let s:slash = !exists("+shellslash") || &shellslash ? '/' : '\'
 " @var drupaldetect#php_ext
 let drupaldetect#php_ext = 'php,module,install,inc,profile,theme,engine,test,view'
+
+" @function! drupaldetect#Check(...) " {{{
+" Decide whether the current file is part of a Drupal project.
+"
+" @param (optional)
+"   a directory to check instead of the current file's project.
+"
+" @return
+"   1 if the current file is part of a Drupal project;
+"   0 otherwise.
+function! drupaldetect#Check(...) " {{{
+  " Expect something like /var/www/drupal-7.9/sites/all/modules/ctools
+  let directory = a:0 ? a:1 : expand('%:p:h')
+  let drupal_root = drupaldetect#DrupalRoot(directory)
+  let info_path = drupaldetect#InfoPath(directory)
+  let core = drupaldetect#CoreVersion(info_path)
+  return strlen(drupal_root) || strlen(core)
+endfun " }}} }}}
 
 " @function drupaldetect#DrupalRoot(path, ...) {{{
 " Try to guess which part of the path is the Drupal root directory.
