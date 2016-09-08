@@ -25,3 +25,6 @@
 [submodule "bundle/vimrc"]
 	path = bundle/vimrc
 	url = http://git.drupal.org/project/vimrc
+[submodule "bundle/SWTC.vim"]
+	path = bundle/SWTC.vim
+	url = https://github.com/shinokada/SWTC.vim
