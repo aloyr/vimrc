@@ -1,6 +1,8 @@
 " pathogen - must come first ----------------------------------------------
 call pathogen#infect()
 call pathogen#helptags()
+" crontab handling --------------------------------------------------------
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " important ---------------------------------------------------------------
 set nocompatible                                      "don't behave like Vi
 " moving around, searching and patterns -----------------------------------
@@ -10,7 +12,8 @@ set smartcase                                          "if caps, watch case
 set ignorecase                               "if all lowercase, ignore case 
 " tags --------------------------------------------------------------------
 " displaying text ---------------------------------------------------------
-set number 
+set number
+set relativenumber 
 set linebreak                                          "wraps between words
 set scrolloff=1 
 " syntax, highlighting and spelling ---------------------------------------
@@ -39,6 +42,9 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set shiftround                    "round > and < to multiples of shiftwidth
+set list
+set listchars=eol:¬,tab:▶·,trail:█,extends:▶,precedes:◀
+set cursorline
 " folding -----------------------------------------------------------------
 set foldmethod=marker
 set foldmarker={{{,}}}
@@ -56,14 +62,14 @@ endif
 " -------------------------------------------------------------------------
 set swapfile
 if &directory =~# '^\.,'
-    let &directory = "/Users/peter/.vim/lib/swap," . &directory
+    let &directory = "~/.vim/lib/swap," . &directory
 endif
 " command line editing ----------------------------------------------------
 set wildmenu
 set wildmode=full
 set undofile
 if &undodir =~# '^\.\%(,\|$\)'
-    let &undodir = "/Users/peter/.vim/lib/undo," . &undodir
+    let &undodir = "~/.vim/lib/undo," . &undodir
 endif
 " executing external commands ---------------------------------------------
 " running make and jumping to errors --------------------------------------
