@@ -1,3 +1,5 @@
+set fileencodings=utf-8
+set encoding=utf-8
 " pathogen - must come first ----------------------------------------------
 call pathogen#infect()
 call pathogen#helptags()
@@ -43,7 +45,7 @@ set softtabstop=2
 set tabstop=2
 set shiftround                    "round > and < to multiples of shiftwidth
 set list
-set listchars=eol:¬,tab:▶·,trail:█,extends:▶,precedes:◀
+set listchars=eol:¬,tab:▶·,trail:█,extends:▶,precedes:◀"
 set cursorline
 " folding -----------------------------------------------------------------
 set foldmethod=marker
@@ -91,6 +93,7 @@ syntax on
 let mapleader=","
 " mappings ----------------------------------------------------------------
 map <silent> <c-n> :NERDTreeFocus<cr>
+inoremap jjj 
 nnoremap \ ,
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
