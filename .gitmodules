@@ -46,3 +46,7 @@
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "bundle/vim-plugin-for-drupal"]
+	path = bundle/vim-plugin-for-drupal
+	url = https://git.drupal.org/project/vimrc.git
+	branch = 7.x-1.x
