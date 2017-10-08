@@ -8,13 +8,6 @@ augroup vimscript
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
-augroup JavaScript
-    autocmd!
-    autocmd FileType javascript nnoremap <buffer> <leader>m :!node %<cr>
-    autocmd FileType javascript nnoremap <buffer> <leader>c gI//<esc>
-    autocmd FileType javascript vnoremap <buffer> <leader>c :normal gI//<esc>
-augroup END
-
 augroup Java
     autocmd!
     autocmd FileType java nnoremap <buffer> <leader>b :!javac %<cr>
