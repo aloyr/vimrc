@@ -3,6 +3,11 @@ set encoding=utf-8
 " pathogen - must come first ----------------------------------------------
 call pathogen#infect()
 call pathogen#helptags()
+
+" includes ----------------------------------------------------------------
+source ~/.vim/custom/color.vim
+
+
 " crontab handling --------------------------------------------------------
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " important ---------------------------------------------------------------
@@ -86,8 +91,6 @@ if has("gui")
     set lines=65 columns=110
 endif
 " -------------------------------------------------------------------------
-let g:solarized_termcolors=256
-colorscheme solarized
 filetype plugin indent on
 syntax on
 let mapleader=","
