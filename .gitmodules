@@ -30,4 +30,4 @@
 	url = https://github.com/shinokada/SWTC.vim
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
+	url = https://github.com/scrooloose/syntastic.git
