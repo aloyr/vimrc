@@ -13,14 +13,6 @@ endfor
 " running make and jumping to errors --------------------------------------
 " language specific -------------------------------------------------------
 " various -----------------------------------------------------------------
-" abbreviations -----------------------------------------------------------
-cnoreabbrev W w
-cnoreabbrev Wq wq
-cnoreabbrev WQ wq
-cnoreabbrev Q! q!
-cnoreabbrev Tabe tabe
-cnoreabbrev wrap set wrap
-cnoreabbrev nowrap set nowrap
 " functions ---------------------------------------------------------------
 function! Fix_markdown_for_tut()
     %s/\(<h\d\) id=["'].+['"]>/\1>/
