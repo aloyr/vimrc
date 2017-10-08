@@ -9,7 +9,3 @@ for config_file in split(glob('~/.vim/vimrc.d/*.vim'), '\n')
   exe 'source' config_file
 endfor
 
-" executing external commands ---------------------------------------------
-" running make and jumping to errors --------------------------------------
-" language specific -------------------------------------------------------
-" various -----------------------------------------------------------------
