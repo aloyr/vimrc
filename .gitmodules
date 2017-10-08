@@ -50,3 +50,6 @@
 	path = bundle/vim-plugin-for-drupal
 	url = https://git.drupal.org/project/vimrc.git
 	branch = 7.x-1.x
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
