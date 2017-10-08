@@ -8,11 +8,6 @@ augroup vimscript
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
-augroup Ruby
-    autocmd!
-    autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
-augroup END
-
 augroup JavaScript
     autocmd!
     autocmd FileType javascript nnoremap <buffer> <leader>m :!node %<cr>
