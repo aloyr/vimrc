@@ -1,48 +1,63 @@
 [submodule "bundle/dash.vim"]
 	path = bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
+	branch = master
 [submodule "bundle/funcoo.vim"]
 	path = bundle/funcoo.vim
 	url = https://github.com/rizzatti/funcoo.vim.git
+	branch = master
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
+	branch = master
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized
+	branch = master
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive
+	branch = master
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
+	branch = master
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround
+	branch = master
 [submodule "bundle/vimrc"]
 	path = bundle/vimrc
 	url = http://git.drupal.org/project/vimrc
+	branch = master
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+	branch = master
 [submodule "bundle/vim-wakatime"]
 	path = bundle/vim-wakatime
 	url = https://github.com/wakatime/vim-wakatime.git
+	branch = master
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+	branch = master
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+	branch = master
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
+	branch = master
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+	branch = master
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
+	branch = master
 [submodule "bundle/vim-plugin-for-drupal"]
 	path = bundle/vim-plugin-for-drupal
 	url = https://git.drupal.org/project/vimrc.git
@@ -50,6 +65,8 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+	branch = master
 [submodule "bundle/youcompleteme"]
 	path = bundle/youcompleteme
 	url = https://github.com/valloric/youcompleteme.git
+	branch = master
