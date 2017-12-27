@@ -70,3 +70,6 @@
 	path = bundle/youcompleteme
 	url = https://github.com/valloric/youcompleteme.git
 	branch = master
+[submodule "bundle/logstash"]
+	path = bundle/logstash
+	url = https://github.com/robbles/logstash.vim.git
