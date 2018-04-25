@@ -73,3 +73,9 @@
 [submodule "bundle/logstash"]
 	path = bundle/logstash
 	url = https://github.com/robbles/logstash.vim.git
+[submodule "bundle/vim-iptables"]
+	path = bundle/vim-iptables
+	url = https://github.com/vim-scripts/iptables.git
+[submodule "bundle/haproxy.vim"]
+	path = bundle/haproxy.vim
+	url = https://github.com/zimbatm/haproxy.vim.git

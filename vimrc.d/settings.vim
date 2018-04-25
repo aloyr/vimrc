@@ -56,3 +56,5 @@ set ttimeoutlen=100
 " command line editing ----------------------------------------------------
 set wildmenu
 set wildmode=full
+" modeline
+set modeline
