@@ -79,3 +79,12 @@
 [submodule "bundle/haproxy.vim"]
 	path = bundle/haproxy.vim
 	url = https://github.com/zimbatm/haproxy.vim.git
+[submodule "bundle/Jenkinsfile-vim-syntax"]
+	path = bundle/Jenkinsfile-vim-syntax
+	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
+[submodule "bundle/toml"]
+	path = bundle/toml
+	url = https://github.com/cespare/vim-toml
+[submodule "bundle/vim-live-reload"]
+	path = bundle/vim-live-reload
+	url = https://github.com/chiedojohn/vim-live-reload.git
