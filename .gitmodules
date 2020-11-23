@@ -84,3 +84,9 @@
 [submodule "bundle/vim-live-reload"]
 	path = bundle/vim-live-reload
 	url = https://github.com/chiedojohn/vim-live-reload.git
+[submodule "bundle/youcompleteme"]
+	path = bundle/youcompleteme
+	url = https://github.com/valloric/youcompleteme.git
+[submodule "bundle/vim-twig"]
+	path = bundle/vim-twig
+	url = https://github.com/evidens/vim-twig.git
