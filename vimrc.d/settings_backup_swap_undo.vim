@@ -14,3 +14,7 @@ if &undodir =~# '^\.\%(,\|$\)'
     let &undodir = "~/.vim/lib/undo," . &undodir
 endif
 
+let &directory = "/tmp//"
+let &undodir = "/tmp//"
+let &backupdir = "/tmp//"
+
