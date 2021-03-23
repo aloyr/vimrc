@@ -1,5 +1,6 @@
 " mappings ----------------------------------------------------------------
-map <silent> <c-n> :NERDTreeFocus<cr>
+" map <silent> <c-n> :NERDTreeFocus<cr>
+map <silent> <c-n> :NERDTreeToggle<cr>
 inoremap jjj 
 nnoremap \ ,
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
