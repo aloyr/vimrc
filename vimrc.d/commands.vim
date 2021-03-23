@@ -8,3 +8,4 @@ augroup vimscript
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
+autocmd BufEnter * lcd %:p:h
