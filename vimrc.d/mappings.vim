@@ -5,6 +5,7 @@ inoremap jjj 
 nnoremap \ ,
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
+nnoremap <leader>m :NERDTreeMirror<cr>
 nnoremap <leader><leader> <c-^>
 nnoremap / /\v
 vnoremap / /\v
