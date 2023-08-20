@@ -13,7 +13,7 @@ set ignorecase                               "if all lowercase, ignore case
 " tags --------------------------------------------------------------------
 " displaying text ---------------------------------------------------------
 set number
-set relativenumber 
+set norelativenumber 
 set linebreak                                          "wraps between words
 set scrolloff=1 
 " syntax, highlighting and spelling ---------------------------------------

@@ -90,3 +90,9 @@
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = https://github.com/evidens/vim-twig.git
+[submodule "bundle/vim-fzf"]
+	path = bundle/vim-fzf
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "bundle/colorizer"]
+	path = bundle/colorizer
+	url = https://github.com/chrisbra/Colorizer
