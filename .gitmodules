@@ -96,3 +96,6 @@
 [submodule "bundle/colorizer"]
 	path = bundle/colorizer
 	url = https://github.com/chrisbra/Colorizer
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf
