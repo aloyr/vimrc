@@ -1,101 +1,101 @@
 [submodule "bundle/dash.vim"]
-	path = bundle/dash.vim
-	url = https://github.com/rizzatti/dash.vim.git
-	branch = master
+  path = bundle/dash.vim
+  url = https://github.com/rizzatti/dash.vim.git
+  branch = master
 [submodule "bundle/funcoo.vim"]
-	path = bundle/funcoo.vim
-	url = https://github.com/rizzatti/funcoo.vim.git
-	branch = master
+  path = bundle/funcoo.vim
+  url = https://github.com/rizzatti/funcoo.vim.git
+  branch = master
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-	branch = master
+  path = bundle/nerdtree
+  url = git://github.com/scrooloose/nerdtree.git
+  branch = master
 [submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized
-	branch = master
+  path = bundle/vim-colors-solarized
+  url = git://github.com/altercation/vim-colors-solarized
+  branch = master
 [submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive
-	branch = master
+  path = bundle/vim-fugitive
+  url = git://github.com/tpope/vim-fugitive
+  branch = master
 [submodule "bundle/vim-sensible"]
-	path = bundle/vim-sensible
-	url = git://github.com/tpope/vim-sensible.git
-	branch = master
+  path = bundle/vim-sensible
+  url = git://github.com/tpope/vim-sensible.git
+  branch = master
 [submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = git://github.com/tpope/vim-surround
-	branch = master
+  path = bundle/vim-surround
+  url = git://github.com/tpope/vim-surround
+  branch = master
 [submodule "bundle/vimrc"]
-	path = bundle/vimrc
-	url = http://git.drupal.org/project/vimrc
-	branch = master
+  path = bundle/vimrc
+  url = http://git.drupal.org/project/vimrc
+  branch = master
 [submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-	branch = master
+  path = bundle/syntastic
+  url = https://github.com/scrooloose/syntastic.git
+  branch = master
 [submodule "bundle/vim-wakatime"]
-	path = bundle/vim-wakatime
-	url = https://github.com/wakatime/vim-wakatime.git
-	branch = master
+  path = bundle/vim-wakatime
+  url = https://github.com/wakatime/vim-wakatime.git
+  branch = master
 [submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-	branch = master
+  path = bundle/vim-snipmate
+  url = https://github.com/garbas/vim-snipmate.git
+  branch = master
 [submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
-	branch = master
+  path = bundle/vim-snippets
+  url = https://github.com/honza/vim-snippets.git
+  branch = master
 [submodule "bundle/tlib_vim"]
-	path = bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
-	branch = master
+  path = bundle/tlib_vim
+  url = https://github.com/tomtom/tlib_vim.git
+  branch = master
 [submodule "bundle/vim-addon-mw-utils"]
-	path = bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-	branch = master
+  path = bundle/vim-addon-mw-utils
+  url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+  branch = master
 [submodule "bundle/vim-easymotion"]
-	path = bundle/vim-easymotion
-	url = https://github.com/easymotion/vim-easymotion.git
-	branch = master
+  path = bundle/vim-easymotion
+  url = https://github.com/easymotion/vim-easymotion.git
+  branch = master
 [submodule "bundle/vim-plugin-for-drupal"]
-	path = bundle/vim-plugin-for-drupal
-	url = https://git.drupal.org/project/vimrc.git
-	branch = 7.x-1.x
+  path = bundle/vim-plugin-for-drupal
+  url = https://git.drupal.org/project/vimrc.git
+  branch = 7.x-1.x
 [submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
-	branch = master
+  path = bundle/emmet-vim
+  url = https://github.com/mattn/emmet-vim.git
+  branch = master
 [submodule "bundle/logstash"]
-	path = bundle/logstash
-	url = https://github.com/robbles/logstash.vim.git
+  path = bundle/logstash
+  url = https://github.com/robbles/logstash.vim.git
 [submodule "bundle/vim-iptables"]
-	path = bundle/vim-iptables
-	url = https://github.com/vim-scripts/iptables.git
+  path = bundle/vim-iptables
+  url = https://github.com/vim-scripts/iptables.git
 [submodule "bundle/haproxy.vim"]
-	path = bundle/haproxy.vim
-	url = https://github.com/zimbatm/haproxy.vim.git
+  path = bundle/haproxy.vim
+  url = https://github.com/zimbatm/haproxy.vim.git
 [submodule "bundle/Jenkinsfile-vim-syntax"]
-	path = bundle/Jenkinsfile-vim-syntax
-	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
+  path = bundle/Jenkinsfile-vim-syntax
+  url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
 [submodule "bundle/toml"]
-	path = bundle/toml
-	url = https://github.com/cespare/vim-toml
+  path = bundle/toml
+  url = https://github.com/cespare/vim-toml
 [submodule "bundle/vim-live-reload"]
-	path = bundle/vim-live-reload
-	url = https://github.com/chiedojohn/vim-live-reload.git
+  path = bundle/vim-live-reload
+  url = https://github.com/chiedojohn/vim-live-reload.git
 [submodule "bundle/youcompleteme"]
-	path = bundle/youcompleteme
-	url = https://github.com/valloric/youcompleteme.git
+  path = bundle/youcompleteme
+  url = https://github.com/valloric/youcompleteme.git
 [submodule "bundle/vim-twig"]
-	path = bundle/vim-twig
-	url = https://github.com/evidens/vim-twig.git
+  path = bundle/vim-twig
+  url = https://github.com/evidens/vim-twig.git
 [submodule "bundle/vim-fzf"]
-	path = bundle/vim-fzf
-	url = https://github.com/junegunn/fzf.vim.git
+  path = bundle/vim-fzf
+  url = https://github.com/junegunn/fzf.vim.git
 [submodule "bundle/colorizer"]
-	path = bundle/colorizer
-	url = https://github.com/chrisbra/Colorizer
+  path = bundle/colorizer
+  url = https://github.com/chrisbra/Colorizer
 [submodule "bundle/fzf"]
-	path = bundle/fzf
-	url = https://github.com/junegunn/fzf
+  path = bundle/fzf
+  url = https://github.com/junegunn/fzf
