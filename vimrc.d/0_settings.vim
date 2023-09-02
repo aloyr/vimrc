@@ -3,6 +3,8 @@ filetype plugin indent on
 syntax on
 let mapleader=","
 
+let g:snipMate = { 'snippet_version' : 1 }
+
 " important ---------------------------------------------------------------
 set nocompatible                                      "don't behave like Vi
 " moving around, searching and patterns -----------------------------------
