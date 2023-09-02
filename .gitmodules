@@ -77,7 +77,7 @@
 [submodule "bundle/toml"]
   path = bundle/toml
   url = https://github.com/cespare/vim-toml
-  branch = master
+  branch = main
 [submodule "bundle/vim-live-reload"]
   path = bundle/vim-live-reload
   url = https://github.com/chiedojohn/vim-live-reload.git
