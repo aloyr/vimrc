@@ -26,10 +26,6 @@
   path = bundle/vim-surround
   url = git://github.com/tpope/vim-surround
   branch = master
-[submodule "bundle/vimrc"]
-  path = bundle/vimrc
-  url = http://git.drupal.org/project/vimrc
-  branch = master
 [submodule "bundle/syntastic"]
   path = bundle/syntastic
   url = https://github.com/scrooloose/syntastic.git
@@ -58,10 +54,6 @@
   path = bundle/vim-easymotion
   url = https://github.com/easymotion/vim-easymotion.git
   branch = master
-[submodule "bundle/vim-plugin-for-drupal"]
-  path = bundle/vim-plugin-for-drupal
-  url = https://git.drupal.org/project/vimrc.git
-  branch = 7.x-1.x
 [submodule "bundle/emmet-vim"]
   path = bundle/emmet-vim
   url = https://github.com/mattn/emmet-vim.git
