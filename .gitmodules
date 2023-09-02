@@ -8,27 +8,27 @@
   branch = master
 [submodule "bundle/nerdtree"]
   path = bundle/nerdtree
-  url = git://github.com/scrooloose/nerdtree.git
+  url = https://github.com/preservim/nerdtree.git
   branch = master
 [submodule "bundle/vim-colors-solarized"]
   path = bundle/vim-colors-solarized
-  url = git://github.com/altercation/vim-colors-solarized
+  url = https://github.com/altercation/vim-colors-solarized.git
   branch = master
 [submodule "bundle/vim-fugitive"]
   path = bundle/vim-fugitive
-  url = git://github.com/tpope/vim-fugitive
+  url = https://github.com/tpope/vim-fugitive.git
   branch = master
 [submodule "bundle/vim-sensible"]
   path = bundle/vim-sensible
-  url = git://github.com/tpope/vim-sensible.git
+  url = https://github.com/tpope/vim-sensible.git
   branch = master
 [submodule "bundle/vim-surround"]
   path = bundle/vim-surround
-  url = git://github.com/tpope/vim-surround
+  url = https://github.com/tpope/vim-surround
   branch = master
 [submodule "bundle/syntastic"]
   path = bundle/syntastic
-  url = https://github.com/scrooloose/syntastic.git
+  url = https://github.com/vim-syntastic/syntastic.git
   branch = master
 [submodule "bundle/vim-wakatime"]
   path = bundle/vim-wakatime
@@ -78,7 +78,7 @@
   url = https://github.com/chiedojohn/vim-live-reload.git
 [submodule "bundle/youcompleteme"]
   path = bundle/youcompleteme
-  url = https://github.com/valloric/youcompleteme.git
+  url = https://github.com/ycm-core/YouCompleteMe.git
 [submodule "bundle/vim-twig"]
   path = bundle/vim-twig
   url = https://github.com/evidens/vim-twig.git
@@ -87,7 +87,7 @@
   url = https://github.com/junegunn/fzf.vim.git
 [submodule "bundle/colorizer"]
   path = bundle/colorizer
-  url = https://github.com/chrisbra/Colorizer
+  url = https://github.com/chrisbra/Colorizer.git
 [submodule "bundle/fzf"]
   path = bundle/fzf
-  url = https://github.com/junegunn/fzf
+  url = https://github.com/junegunn/fzf.git
