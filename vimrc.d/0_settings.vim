@@ -5,6 +5,11 @@ let mapleader=","
 
 let g:snipMate = { 'snippet_version' : 1 }
 
+" Use silver_surfer
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
 " important ---------------------------------------------------------------
 set nocompatible                                      "don't behave like Vi
 " moving around, searching and patterns -----------------------------------
