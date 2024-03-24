@@ -6,6 +6,14 @@ nnoremap \ ,
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
 nnoremap <leader>m :NERDTreeMirror<cr>
+
+" open NERDTree on start
+autocmd VimEnter * NERDTree
+" mirror NERDTree
+autocmd BufEnter * NERDTreeMirror
+" focus on NERDTree
+autocmd VimEnter * wincmd w
+
 nnoremap <leader><leader> <c-^>
 nnoremap / /\v
 vnoremap / /\v
