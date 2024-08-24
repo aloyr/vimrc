@@ -40,6 +40,7 @@ set ruler                                             "show cursor position
 " selecting text ----------------------------------------------------------
 " editing text ------------------------------------------------------------
 set nrformats-=octal                  "0-prefixed numbers are still decimal
+set nrformats+=alpha                  "include alpha chars
 set backspace=indent,eol,start                          "proper backspacing
 " tabs and indenting ------------------------------------------------------
 set autoindent
