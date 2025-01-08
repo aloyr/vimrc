@@ -102,9 +102,6 @@
   path = bundle/fzf
   url = https://github.com/junegunn/fzf.git
   branch = master
-[submodule "bundle/ack.vim"]
-	path = bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/vim-signature"]
-	path = bundle/vim-signature
-	url = https://github.com/kshenoy/vim-signature.git
+[submodule "bundle/fzf.vim"]
+  path = bundle/fzf.vim
+  url = https://github.com/junegunn/fzf.vim
