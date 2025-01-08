@@ -27,3 +27,10 @@ vnoremap <tab> >
 vnoremap <s-tab> <
 " registers -------------------
 let @s='gg:%s/^\n//gg/todayOkggjI0. gvgnjGkI0. gvggg:%s/^yesterday/`yesterday`/:%s/^today/`today`/:%s/` \:/`:/ggVG"*yy'
+
+" pane resize
+noremap <silent> <C-S-Right> :vertical resize -1<CR>
+noremap <silent> <C-S-Left> :vertical resize +1<CR>
+noremap <silent> <C-S-Up> :resize -1<CR>
+noremap <silent> <C-S-Down> :resize +1<CR>
+
